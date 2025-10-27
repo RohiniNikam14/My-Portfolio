@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohini - Developer Portfolio</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+<nav>
+  <div class="nav-brand">Rohini’s Portfolio</div>
+  <button class="hamburger" id="hamburger" aria-label="Open sidebar menu">&#9776;</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#" class="nav-link active" onclick="navigate('home')">Home</a></li>
+    <li><a href="#" class="nav-link" onclick="navigate('about')">About</a></li>
+    <li><a href="#" class="nav-link" onclick="navigate('projects')">Projects</a></li>
+    <li><a href="#" class="nav-link" onclick="navigate('certifications')">Certifications</a></li>
+    <li><a href="#" class="nav-link" onclick="navigate('experience')">Experience</a></li>
+    <li><a href="#" class="nav-link" onclick="navigate('contact')">Contact</a></li>
+  </ul>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+</nav>
+
+
+
+
+  <main>
+
+    <!-- Home Section -->
+    <section class="neat-section" id="home">
+      <div class="firstSection">
+        <div class="leftSection">
+          Hi, My name is <span class="purple">Rohini</span>
+          <div>and I am a passionate</div>
+          <span class="purple" id="element"></span>
+          <div class="buttons">
+            <button class="btn" onclick="downloadResume()">Download Resume</button>
+            <button class="btn" onclick="window.open('https://www.linkedin.com/in/rohininikam14', '_blank', 'noopener,noreferrer')">LinkedIn</button>
+            <button class="btn" onclick="window.open('https://github.com/RohiniNikam14', '_blank', 'noopener,noreferrer')">GitHub</button>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="neat-section" id="about">
+      <h2>About Me</h2>
+      <div class="aboutMe">
+        <p>I am Rohini Nikam from Shirpur, Maharashtra.</p>
+        <p>Education: R.C. Patel Institute Of Technology, B.Tech, CGPA 7.7</p>
+        <p>Skills: Java, C, JavaScript, SQL, VS Code, GitHub, Git</p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="neat-section" id="projects">
+      <h2>Projects</h2>
+      <div class="neat-projects">
+        <div class="neat-card" onclick="toggleDetails('proj1')">
+          <h3>Spotify Clone</h3>
+          <div class="project-details" id="proj1">UI and basic music app features with HTML, CSS, JavaScript.</div>
+        </div>
+        <div class="neat-card" onclick="toggleDetails('proj2')">
+          <h3>Netflix Clone</h3>
+          <div class="project-details" id="proj2">Streaming app UI created using HTML and CSS.</div>
+        </div>
+        <div class="neat-card" onclick="toggleDetails('proj3')">
+          <h3>Quiz Game Application</h3>
+          <div class="project-details" id="proj3">Shows score, allows restart. HTML, CSS, JS.</div>
+        </div>
+        <div class="neat-card" onclick="toggleDetails('proj4')">
+          <h3>Expense Tracker</h3>
+          <div class="project-details" id="proj4">Add/remove expenses, track spending. HTML, CSS, JS.</div>
+        </div>
+        <div class="neat-card" onclick="toggleDetails('proj5')">
+          <h3>Stopwatch</h3>
+          <div class="project-details" id="proj5">Reset, lap, play. HTML, CSS, JS.</div>
+        </div>
+        <div class="neat-card" onclick="toggleDetails('proj6')">
+          <h3>ProjectHub College Portal</h3>
+          <div class="project-details" id="proj6">Full-stack college project portal.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="neat-section" id="certifications">
+      <h2>Certifications</h2>
+      <div class="cert-list">
+        <button class="cert-btn" onclick="toggleDetails('cert1')">Java & OOPs (NPTEL, CodeChef)</button>
+        <div class="cert-details" id="cert1">Completed concepts in Java (NPTEL/CodeChef).</div>
+
+        <button class="cert-btn" onclick="toggleDetails('cert2')">SQL (CodeChef)</button>
+        <div class="cert-details" id="cert2">SQL credential by CodeChef.</div>
+
+        <button class="cert-btn" onclick="toggleDetails('cert3')">Frontend Web (Infosys Springboard)</button>
+        <div class="cert-details" id="cert3">Front End Developer badge.</div>
+
+        <button class="cert-btn" onclick="toggleDetails('cert4')">Projects using HTML CSS (CodeChef)</button>
+        <div class="cert-details" id="cert4">Project-based HTML, CSS coding certification.</div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="neat-section" id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-date">Aug–Sep 2025</span>
+          <span class="timeline-role">Web Development Intern, Skillcraft Technology</span>
+          <div class="timeline-desc">Worked on web projects: hands-on, collaborative development.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="neat-section" id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-cards">
+    <div class="contact-card">
+      <div class="contact-label">Email</div>
+      <a href="mailto:nikamrohini1459@gmail.com" class="contact-link">nikamrohini1459@gmail.com</a>
+    </div>
+    
+   <div class="contact-card">
+  <div class="contact-label">LinkedIn</div>
+  <a href="https://www.linkedin.com/in/rohininikam14" class="contact-link" target="_blank" rel="noopener noreferrer">
+    linkedin.com/in/rohininikam14
+  </a>
+</div>
+
+
+
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <div>Copyright &#169; rohinisportfolio.com | All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer", "Frontend Specialist" ,"Fullstack Learner"],
+        loop: true,
+        typeSpeed: 50,
+      });
+    </script>
+</body>
+</html>
+
